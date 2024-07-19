@@ -6,7 +6,7 @@
 
 #include "BundleFile.h"
 
-AssetBundle* LoadFromBytes(const char* data, size_t size){
+ABRECOMPRESSOR_API AssetBundle* LoadFromBytes(const char* data, size_t size){
     AssetBundle* bundle = new AssetBundle();
     ByteArr* bData = new ByteArr((byte*)data, size);
     try {
@@ -19,7 +19,7 @@ AssetBundle* LoadFromBytes(const char* data, size_t size){
     return bundle;
 }
 
-const char* CompressToBytes(AssetBundle* bundle, char compressionType, size_t* size){
+ABRECOMPRESSOR_API const char* CompressToBytes(AssetBundle* bundle, char compressionType, size_t* size){
     if (compressionType < 0 || compressionType > 3){
         throw std::runtime_error("Invalid compression type");
     }

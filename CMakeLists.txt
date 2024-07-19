@@ -17,4 +17,6 @@ find_package(liblzma CONFIG REQUIRED)
 
 add_library(ABRecompressor SHARED src/ABRecompressor.cpp)
 
+target_compile_definitions(ABRecompressor PRIVATE ABRECOMPRESSOR_EXPORTS)
+
 target_link_libraries(ABRecompressor PRIVATE lz4::lz4 liblzma::liblzma)
