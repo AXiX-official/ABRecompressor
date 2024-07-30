@@ -10,10 +10,14 @@ extern "C" {
 #define ABRECOMPRESSOR_H
 
 #ifdef _WIN32
-    #ifdef ABRECOMPRESSOR_EXPORTS
-        #define ABRECOMPRESSOR_API __declspec(dllexport)
+    #ifdef ABRECOMPRESSOR_STATIC
+        #define ABRECOMPRESSOR_API
     #else
-        #define ABRECOMPRESSOR_API __declspec(dllimport)
+        #ifdef ABRECOMPRESSOR_EXPORTS
+            #define ABRECOMPRESSOR_API __declspec(dllexport)
+        #else
+            #define ABRECOMPRESSOR_API __declspec(dllimport)
+        #endif
     #endif
 #else
     #define ABRECOMPRESSOR_API

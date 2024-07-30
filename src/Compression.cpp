@@ -80,6 +80,7 @@ ByteArr* Compress(CompressionType compressionType, byte* tocompressData, uint to
         lzma_ret ret;
         lzma_options_lzma opt;
         lzma_lzma_preset(&opt, LZMA_PRESET_EXTREME);
+        opt.dict_size = 0x200000;
         ret = lzma_alone_encoder(&strm, &opt);
         if (ret != LZMA_OK) {
             throw std::runtime_error("lzma_stream_buffer_decode error: " + std::to_string(ret));
