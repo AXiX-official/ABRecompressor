@@ -1,5 +1,7 @@
 # ABRecompressor
 
+[<img src="https://api.gitsponsors.com/api/badge/img?id=831036754" height="20">](https://api.gitsponsors.com/api/badge/link?p=eVJZBiuK6mWk6yFSPbf7xeWZYN+oapLYZSz8i6+TQpsq9GhgpAbVvx9Snb/NKX+OTlyqvXeWt/8Je2PF9Hm7qjO8g9yzLpzGP4JUgNwSr4+4gXjyF3qyxRg0m9W4Uak3lENaQb1G6zP9I91Gg3e1YQ==)
+
 ABRecompressor 是一个简单（简陋）的工具，用于重新压缩 AssetBundle 文件。
 
 ## 功能
